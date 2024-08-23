@@ -30,9 +30,10 @@ const App = () => {
           <Route path="/step6" element={<FormPage6 currentStep={7} totalSteps={totalSteps} />} />
           <Route path="/step7" element={<FormPage7 currentStep={8} totalSteps={totalSteps} />} />
           <Route path="/step8" element={<FormPage8 currentStep={9} totalSteps={totalSteps} />} />
-          <Route path="/step8-5" element={<FormPage85 currentStep={10} totalSteps={totalSteps} />} /> 
+          <Route path="/step8-5" element={<FormPage85 currentStep={10} totalSteps={totalSteps} />} />
           <Route path="/step9" element={<FormPage9 currentStep={11} totalSteps={totalSteps} />} />
           <Route path="/completion" element={<FormCompletionPage />} />
+          <Route path="*" element={<FormPage1 currentStep={1} totalSteps={totalSteps} />} /> {/* Fallback route */}
         </Routes>
       </Router>
     </FormProvider>
