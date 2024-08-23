@@ -2,7 +2,7 @@
   "name": "multi-page-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Autosnap/legacyindustrialcoatings_form",
+  "homepage": "https://autosnap.github.io/legacyindustrialcoatings_form",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
