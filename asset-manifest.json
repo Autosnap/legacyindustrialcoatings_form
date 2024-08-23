@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Autosnap/legacyindustrialcoatings_form/static/css/main.56805089.chunk.css",
-    "main.js": "/Autosnap/legacyindustrialcoatings_form/static/js/main.b1b13c97.chunk.js",
-    "main.js.map": "/Autosnap/legacyindustrialcoatings_form/static/js/main.b1b13c97.chunk.js.map",
-    "runtime~main.js": "/Autosnap/legacyindustrialcoatings_form/static/js/runtime~main.255c8791.js",
-    "runtime~main.js.map": "/Autosnap/legacyindustrialcoatings_form/static/js/runtime~main.255c8791.js.map",
-    "static/css/2.12f8b395.chunk.css": "/Autosnap/legacyindustrialcoatings_form/static/css/2.12f8b395.chunk.css",
-    "static/js/2.e7298fa0.chunk.js": "/Autosnap/legacyindustrialcoatings_form/static/js/2.e7298fa0.chunk.js",
-    "static/js/2.e7298fa0.chunk.js.map": "/Autosnap/legacyindustrialcoatings_form/static/js/2.e7298fa0.chunk.js.map",
-    "index.html": "/Autosnap/legacyindustrialcoatings_form/index.html",
-    "precache-manifest.c92ad5d2eab45d17db489954b74e4ee2.js": "/Autosnap/legacyindustrialcoatings_form/precache-manifest.c92ad5d2eab45d17db489954b74e4ee2.js",
-    "service-worker.js": "/Autosnap/legacyindustrialcoatings_form/service-worker.js",
-    "static/css/2.12f8b395.chunk.css.map": "/Autosnap/legacyindustrialcoatings_form/static/css/2.12f8b395.chunk.css.map",
-    "static/css/main.56805089.chunk.css.map": "/Autosnap/legacyindustrialcoatings_form/static/css/main.56805089.chunk.css.map"
+    "main.css": "/legacyindustrialcoatings_form/static/css/main.56805089.chunk.css",
+    "main.js": "/legacyindustrialcoatings_form/static/js/main.b1b13c97.chunk.js",
+    "main.js.map": "/legacyindustrialcoatings_form/static/js/main.b1b13c97.chunk.js.map",
+    "runtime~main.js": "/legacyindustrialcoatings_form/static/js/runtime~main.db0c0438.js",
+    "runtime~main.js.map": "/legacyindustrialcoatings_form/static/js/runtime~main.db0c0438.js.map",
+    "static/css/2.12f8b395.chunk.css": "/legacyindustrialcoatings_form/static/css/2.12f8b395.chunk.css",
+    "static/js/2.e7298fa0.chunk.js": "/legacyindustrialcoatings_form/static/js/2.e7298fa0.chunk.js",
+    "static/js/2.e7298fa0.chunk.js.map": "/legacyindustrialcoatings_form/static/js/2.e7298fa0.chunk.js.map",
+    "index.html": "/legacyindustrialcoatings_form/index.html",
+    "precache-manifest.67565d7b7505eaf33000c02289632d66.js": "/legacyindustrialcoatings_form/precache-manifest.67565d7b7505eaf33000c02289632d66.js",
+    "service-worker.js": "/legacyindustrialcoatings_form/service-worker.js",
+    "static/css/2.12f8b395.chunk.css.map": "/legacyindustrialcoatings_form/static/css/2.12f8b395.chunk.css.map",
+    "static/css/main.56805089.chunk.css.map": "/legacyindustrialcoatings_form/static/css/main.56805089.chunk.css.map"
   }
 }
