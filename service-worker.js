@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/legacyindustrialcoatings_form/precache-manifest.238fc80582a30e1c8099ba570048875e.js"
+  "/legacyindustrialcoatings_form/precache-manifest.dfcfe71869c79e80a34fe150dd68773b.js"
 );
 
 self.addEventListener('message', (event) => {
