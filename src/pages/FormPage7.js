@@ -26,7 +26,7 @@ const FormPage7 = ({ currentStep, totalSteps }) => {
           </label>
         </div>
         <div className="image-field">
-          <img src="/images/steps.jpg" alt="Static" />
+          <img src="https://autosnap.github.io/legacyindustrialcoatings_form/images/steps.jpg" alt="Garage Floor Step Coating" />
         </div>
       </form>
       <FormNavigation prevPath="/step6" nextPath="/step8" />

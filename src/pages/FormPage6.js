@@ -8,9 +8,9 @@ const FormPage6 = ({ currentStep, totalSteps }) => {
   const [error, setError] = useState('');
 
   const options = [
-    { value: 'No Damage', title: 'No Damage', image: '/images/no_damage.jpg' },
-    { value: 'Medium Damage', title: 'Medium Damage', image: '/images/medium_damage.jpg' },
-    { value: 'Heavy Damage', title: 'Heavy Damage', image: '/images/heavy_damage.jpg' },
+    { value: 'No Damage', title: 'No Damage', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/no_damage.jpg' },
+    { value: 'Medium Damage', title: 'Medium Damage', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/medium_damage.jpg' },
+    { value: 'Heavy Damage', title: 'Heavy Damage', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/heavy_damage.jpg' },
   ];
 
   const handleOptionChange = (value) => {

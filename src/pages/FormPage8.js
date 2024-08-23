@@ -8,9 +8,9 @@ const FormPage8 = ({ currentStep, totalSteps }) => {
   const [error, setError] = useState('');
 
   const options = [
-    { value: 'none', title: 'No Stem Treatment', image: '/images/no_vertical.jpeg' },
-    { value: 'standard', title: 'Standard 2-4" Treatment', image: '/images/base.jpg' },
-    { value: 'tall', title: 'Tall Stem Treatment', image: '/images/stem.jpg' },
+    { value: 'none', title: 'No Stem Treatment', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/no_vertical.jpeg' },
+    { value: 'standard', title: 'Standard 2-4" Treatment', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/base.jpg' },
+    { value: 'tall', title: 'Tall Stem Treatment', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/stem.jpg' },
   ];
 
   const handleOptionChange = (value) => {

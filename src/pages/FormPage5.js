@@ -26,7 +26,7 @@ const FormPage5 = ({ currentStep, totalSteps }) => {
           </label>
         </div>
         <div className="image-field">
-          <img src="/images/silicasand.jpg" alt="Static" />
+          <img src="https://autosnap.github.io/legacyindustrialcoatings_form/images/silicasand.jpg" alt="Silica Sand Coating" />
         </div>
       </form>
       <FormNavigation prevPath="/step4" nextPath="/step6" />
