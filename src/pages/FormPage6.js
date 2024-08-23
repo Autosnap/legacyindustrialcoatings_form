@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FormContext } from '../FormContext';
 import FormNavigation from '../components/FormNavigation';
 import ProgressBar from '../components/ProgressBar';
 
 const FormPage6 = ({ currentStep, totalSteps }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const { formData, updateFormData } = useContext(FormContext);
+  const [error, setError] = useState('');
 
   const options = [
     { value: 'No Damage', title: 'No Damage', image: '/images/no_damage.jpg' },
@@ -11,12 +13,28 @@ const FormPage6 = ({ currentStep, totalSteps }) => {
     { value: 'Heavy Damage', title: 'Heavy Damage', image: '/images/heavy_damage.jpg' },
   ];
 
-
   const handleOptionChange = (value) => {
-    setSelectedOption(value);
+    updateFormData('floorCondition', value);
+    setError(''); // Clear any previous error when an option is selected
   };
 
-  const selectedImage = options.find(option => option.value === selectedOption)?.image;
+  const validateSelection = () => {
+    if (!formData.floorCondition) {
+      setError('Please select the condition of your current floor.');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = () => {
+    if (validateSelection()) {
+      return true; // Validation passed, proceed to the next page
+    } else {
+      return false; // Validation failed, stay on the current page
+    }
+  };
+
+  const selectedImage = options.find(option => option.value === formData.floorCondition)?.image;
 
   return (
     <div className="form-page">
@@ -29,7 +47,7 @@ const FormPage6 = ({ currentStep, totalSteps }) => {
             {options.map(option => (
               <div
                 key={option.value}
-                className={`option ${option.value === selectedOption ? 'selected' : ''}`}
+                className={`option ${option.value === formData.floorCondition ? 'selected' : ''}`}
                 onClick={() => handleOptionChange(option.value)}
               >
                 <img src={option.image} alt={option.title} />
@@ -37,6 +55,7 @@ const FormPage6 = ({ currentStep, totalSteps }) => {
               </div>
             ))}
           </div>
+          {error && <span className="error-message">{error}</span>}
         </div>
         {selectedImage && (
           <div className="image-preview">
@@ -44,7 +63,11 @@ const FormPage6 = ({ currentStep, totalSteps }) => {
           </div>
         )}
       </form>
-      <FormNavigation prevPath="/step5" nextPath="/step7" />
+      <FormNavigation 
+        prevPath="/step5" 
+        nextPath="/step7" 
+        onNext={handleNext} 
+      />
     </div>
   );
 };

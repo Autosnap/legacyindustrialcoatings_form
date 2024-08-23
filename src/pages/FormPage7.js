@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { FormContext } from '../FormContext';
 import FormNavigation from '../components/FormNavigation';
 import ProgressBar from '../components/ProgressBar';
 
 const FormPage7 = ({ currentStep, totalSteps }) => {
-  const [switchValue, setSwitchValue] = useState(false);
+  const { formData, updateFormData } = useContext(FormContext);
 
   const handleSwitchChange = (e) => {
-    setSwitchValue(e.target.checked);
+    updateFormData('garageStepCoating', e.target.checked);
   };
 
   return (
@@ -18,7 +19,7 @@ const FormPage7 = ({ currentStep, totalSteps }) => {
           <label className="switch">
             <input
               type="checkbox"
-              checked={switchValue}
+              checked={formData.garageStepCoating || false} // Ensure checked is always boolean
               onChange={handleSwitchChange}
             />
             <span className="slider"></span>

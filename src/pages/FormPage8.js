@@ -1,22 +1,40 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FormContext } from '../FormContext';
 import FormNavigation from '../components/FormNavigation';
 import ProgressBar from '../components/ProgressBar';
 
 const FormPage8 = ({ currentStep, totalSteps }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const { formData, updateFormData } = useContext(FormContext);
+  const [error, setError] = useState('');
 
   const options = [
-    { value: 'none', title: 'No Stem Treatment', image: '/images/stem.jpg' },
-    { value: 'standard', title: 'Standard 2-4" Treatment', image: '/images/stem.jpg' },
-    { value: 'tall', title: 'Tall stem Treatment', image: '/images/stem.jpg' },
+    { value: 'none', title: 'No Stem Treatment', image: '/images/no_vertical.jpeg' },
+    { value: 'standard', title: 'Standard 2-4" Treatment', image: '/images/base.jpg' },
+    { value: 'tall', title: 'Tall Stem Treatment', image: '/images/stem.jpg' },
   ];
 
-
   const handleOptionChange = (value) => {
-    setSelectedOption(value);
+    updateFormData('stemTreatment', value);
+    setError(''); // Clear any previous error when an option is selected
   };
 
-  const selectedImage = options.find(option => option.value === selectedOption)?.image;
+  const validateSelection = () => {
+    if (!formData.stemTreatment) {
+      setError('Please select a stem treatment option.');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = () => {
+    if (validateSelection()) {
+      return true; // Validation passed, proceed to the next page
+    } else {
+      return false; // Validation failed, stay on the current page
+    }
+  };
+
+  const selectedImage = options.find(option => option.value === formData.stemTreatment)?.image;
 
   return (
     <div className="form-page">
@@ -29,7 +47,7 @@ const FormPage8 = ({ currentStep, totalSteps }) => {
             {options.map(option => (
               <div
                 key={option.value}
-                className={`option ${option.value === selectedOption ? 'selected' : ''}`}
+                className={`option ${option.value === formData.stemTreatment ? 'selected' : ''}`}
                 onClick={() => handleOptionChange(option.value)}
               >
                 <img src={option.image} alt={option.title} />
@@ -37,6 +55,7 @@ const FormPage8 = ({ currentStep, totalSteps }) => {
               </div>
             ))}
           </div>
+          {error && <span className="error-message">{error}</span>}
         </div>
         {selectedImage && (
           <div className="image-preview">
@@ -44,7 +63,11 @@ const FormPage8 = ({ currentStep, totalSteps }) => {
           </div>
         )}
       </form>
-      <FormNavigation prevPath="/step7" nextPath="/step9" />
+      <FormNavigation 
+        prevPath="/step7" 
+        nextPath="/step8-5" 
+        onNext={handleNext} 
+      />
     </div>
   );
 };

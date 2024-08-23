@@ -1,0 +1,90 @@
+.completion-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.completion-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.summary-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.summary-header {
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  margin-bottom: 20px;
+}
+
+.summary-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #066aab; /* Updated color */
+}
+
+.summary-label {
+  font-size: 16px;
+  color: #666;
+}
+
+.date-summary {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.date-item {
+  text-align: left;
+}
+
+.date-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.date-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-button {
+  background-color: #066aab; /* Updated color */
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #05568c; /* Darker shade of blue */
+}

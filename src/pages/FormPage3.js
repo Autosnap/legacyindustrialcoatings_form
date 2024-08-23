@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { FormContext } from '../FormContext';
 import FormNavigation from '../components/FormNavigation';
 import ProgressBar from '../components/ProgressBar';
 
 const FormPage3 = ({ currentStep, totalSteps }) => {
-  const [selectedOption, setSelectedOption] = useState('');
-  const [imagePreview, setImagePreview] = useState('');
+  const { formData, updateFormData } = useContext(FormContext);
+  const [error, setError] = useState('');
 
   const options = [
     { value: 'Bambi', label: 'Bambi', image: '/images/Bambi.png', preview: '/images/Bambi_preview.jpg' },
@@ -20,8 +21,25 @@ const FormPage3 = ({ currentStep, totalSteps }) => {
 
   const handleOptionChange = (value) => {
     const selected = options.find(option => option.value === value);
-    setSelectedOption(value);
-    setImagePreview(selected ? selected.preview : '');
+    updateFormData('floorStyle', value);
+    updateFormData('imagePreview', selected ? selected.preview : '');
+    setError(''); // Clear any previous error when an option is selected
+  };
+
+  const validateSelection = () => {
+    if (!formData.floorStyle) {
+      setError('Please select a floor flake style.');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNext = () => {
+    if (validateSelection()) {
+      return true; // Validation passed, proceed to the next page
+    } else {
+      return false; // Validation failed, stay on the current page
+    }
   };
 
   return (
@@ -35,7 +53,7 @@ const FormPage3 = ({ currentStep, totalSteps }) => {
             {options.map(option => (
               <div
                 key={option.value}
-                className={`custom-select-option ${option.value === selectedOption ? 'selected' : ''}`}
+                className={`custom-select-option ${option.value === formData.floorStyle ? 'selected' : ''}`}
                 onClick={() => handleOptionChange(option.value)}
               >
                 <img src={option.image} alt={option.label} />
@@ -43,14 +61,19 @@ const FormPage3 = ({ currentStep, totalSteps }) => {
               </div>
             ))}
           </div>
+          {error && <span className="error-message">{error}</span>}
         </div>
-        {imagePreview && (
+        {formData.imagePreview && (
           <div className="image-preview">
-            <img src={imagePreview} alt="Preview" />
+            <img src={formData.imagePreview} alt="Preview" />
           </div>
         )}
       </form>
-      <FormNavigation prevPath="/step2" nextPath="/step4" />
+      <FormNavigation 
+        prevPath="/step2-5" 
+        nextPath="/step4" 
+        onNext={handleNext} 
+      />
     </div>
   );
 };
