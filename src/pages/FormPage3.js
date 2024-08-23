@@ -8,15 +8,15 @@ const FormPage3 = ({ currentStep, totalSteps }) => {
   const [error, setError] = useState('');
 
   const options = [
-    { value: 'Bambi', label: 'Bambi', image: '/images/Bambi.png', preview: '/images/Bambi_preview.jpg' },
-    { value: 'Cabin Fever', label: 'Cabin Fever', image: '/images/Cabin_Fever.png', preview: '/images/CabinFever_preview.jpg' },
-    { value: 'Coyote', label: 'Coyote', image: '/images/Coyote.png', preview: '/images/Coyote_preview.jpg' },
-    { value: 'Domino', label: 'Domino', image: '/images/Domino.png', preview: '/images/Domino_preview.jpg' },
-    { value: 'Gravel', label: 'Gravel', image: '/images/Gravel.png', preview: '/images/Gravel_preview.jpg' },
-    { value: 'Raven', label: 'Raven', image: '/images/Raven.png', preview: '/images/Raven_preview.jpg' },
-    { value: 'Safari', label: 'Safari', image: '/images/Safari.png', preview: '/images/Safari_preview.jpg' },
-    { value: 'Tidal Wave', label: 'Tidal Wave', image: '/images/Tidal_Wave.png', preview: '/images/TidalWave_preview.jpg' },
-    { value: 'Wombat', label: 'Wombat', image: '/images/Wombat.png', preview: '/images/Wombat_preview.jpg' },
+    { value: 'Bambi', label: 'Bambi', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Bambi.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Bambi_preview.jpg' },
+    { value: 'Cabin Fever', label: 'Cabin Fever', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Cabin_Fever.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/CabinFever_preview.jpg' },
+    { value: 'Coyote', label: 'Coyote', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Coyote.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Coyote_preview.jpg' },
+    { value: 'Domino', label: 'Domino', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Domino.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Domino_preview.jpg' },
+    { value: 'Gravel', label: 'Gravel', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Gravel.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Gravel_preview.jpg' },
+    { value: 'Raven', label: 'Raven', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Raven.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Raven_preview.jpg' },
+    { value: 'Safari', label: 'Safari', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Safari.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Safari_preview.jpg' },
+    { value: 'Tidal Wave', label: 'Tidal Wave', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Tidal_Wave.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/TidalWave_preview.jpg' },
+    { value: 'Wombat', label: 'Wombat', image: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Wombat.png', preview: 'https://autosnap.github.io/legacyindustrialcoatings_form/images/Wombat_preview.jpg' },
   ];
 
   const handleOptionChange = (value) => {
