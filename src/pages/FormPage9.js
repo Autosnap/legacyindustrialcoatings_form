@@ -60,7 +60,7 @@ const FormPage9 = ({ currentStep, totalSteps }) => {
     // Log the templateParams to verify data before sending
     console.log('Template Params:', templateParams);
 
-    emailjs.send('service_tnhfzqo', 'template_4sme2px', templateParams, 'iYRtAfT5N99Oi_ETl')
+    emailjs.send('service_jet4rbv', 'template_7sythvg', templateParams, 'Nbr0yHwDIMS9ih92c')
       .then(response => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Your quote has been sent to your email!');
