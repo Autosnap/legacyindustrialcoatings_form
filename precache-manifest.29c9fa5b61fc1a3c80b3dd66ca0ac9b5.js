@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6411838024723ce64e004ff2fadd84ee",
+    "revision": "0e865023d2a323583308db9fd8a9e123",
     "url": "/legacyindustrialcoatings_form/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/legacyindustrialcoatings_form/static/css/2.12f8b395.chunk.css"
   },
   {
-    "revision": "008ada3c1e02eed6fcc3",
+    "revision": "5758b67b422438b59160",
     "url": "/legacyindustrialcoatings_form/static/css/main.56805089.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/legacyindustrialcoatings_form/static/js/2.e7298fa0.chunk.js"
   },
   {
-    "revision": "008ada3c1e02eed6fcc3",
-    "url": "/legacyindustrialcoatings_form/static/js/main.fb634563.chunk.js"
+    "revision": "5758b67b422438b59160",
+    "url": "/legacyindustrialcoatings_form/static/js/main.9ee55c3f.chunk.js"
   },
   {
     "revision": "c6c87fde856816a9d746",
