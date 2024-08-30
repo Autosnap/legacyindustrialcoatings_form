@@ -1,0 +1,9 @@
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjusts space between elements */
+}
+
+.toggle-label {
+  font-weight: bold;
+}
